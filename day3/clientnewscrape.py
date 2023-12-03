@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import xlwt
 from xlwt import Workbook
 wb = Workbook()
-# url="https://www.yep.co.za/search?category=81522"
+# url="https://www.*********/search?category=81522"
 # r=requests.get(url)
 # htmlContent=r.content
 # # print(htmlContent)
@@ -16,7 +16,7 @@ wb = Workbook()
 #     a=i.find('a')
 #     try:
 #         if 'href' in a.attrs:
-#             url='https://www.yep.co.za'+str(a.get('href'))
+#             url='https://www.***.co.za'+str(a.get('href'))
 #             urls.append(url)
 #     except:
 #         pass
@@ -31,7 +31,7 @@ def get_links(url):
         a=i.find('a')
         try:
             if 'href' in a.attrs:
-                url='https://www.yep.co.za'+str(a.get('href'))
+                url='https://www.***.**.za'+str(a.get('href'))
                 urls.append(url)
         except:
             pass
@@ -94,9 +94,9 @@ def whichpage(num):
     prep=[]
     global count
     if num==1:
-        url='https://www.yep.co.za/search?category=81522'
+        url='https://www.***.co.za/search?category=81522'
     else:
-        url='https://www.yep.co.za/search?category=81522&pageNumber='+str(num)
+        url='https://www.***.co.za/search?category=81522&pageNumber='+str(num)
     x=get_links(url)
     a=0
     for con1 in x:
@@ -124,7 +124,7 @@ def excel(items):
         
         sheet1.write(b, 5, i[3])
         b+=1
-# x=get_links('https://www.yep.co.za/search?category=81522')
+# x=get_links('https://www.***.co.za/search?category=81522')
 # y=get_content(x[0])
 # xy=set()
 # for i in y:
@@ -137,7 +137,7 @@ def excel(items):
 #     excel(do)
 # wb.save('clientfile.xls')
 
-for i in range(1, 745): #scrapping 251-500 out of 744
+for i in range(1, 745):
     do=whichpage(i)
     excel(do)
     print("PageScrapped:", i,"\n")
