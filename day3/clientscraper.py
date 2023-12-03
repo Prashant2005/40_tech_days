@@ -4,7 +4,7 @@ import xlwt
 from xlwt import Workbook
 wb = Workbook()
 
-url1='https://www.ncr.org.za/register_of_registrants/registered_cp.php'
+url1='https://www.***.org.za/register_of_registrants/registered_cp.php'
 # url2=''
 # url=url1+url2
 # fetchAndSaveToFile(url, "data/fetched.html")
